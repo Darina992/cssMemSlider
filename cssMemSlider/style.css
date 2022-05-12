@@ -1,0 +1,114 @@
+body{
+  margin: 0;
+  padding: 0;
+  background-color: #e4d6c7;
+  font-size: 20px;
+  font-family: 'Pangolin', cursive;
+}
+.conteiner{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 30em;
+  margin: 2em auto;
+}
+.slider-conteiner{
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+  box-shadow: 0.4em 0.4em 0.4em grey;
+  border-radius: 1em;
+  margin-bottom: 1em;
+}
+.slider{
+  width: calc(30em * 4);
+  display: flex;
+  transition: transform 0.5s linear;
+}
+.slider-image{
+  width: 30em;
+  height: 30em;
+  display: inline-block;
+  border-radius: 2em;
+}
+.slider-image img{
+  width: 100%;
+  height: 100%;
+  display: block;
+  border-radius: 1em;
+}
+.conteiner > input{
+  opacity: 0;
+}
+.slider-controls{
+  width: 30%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.slider-controls label{
+  display: inline-block;
+  padding: 0.4em;
+  cursor: pointer;
+  transition: 0.2s;
+}
+.slider-controls label span{
+  display: block;
+  width: 1em;
+  height: 1em;
+  box-sizing: border-box;
+  border: 0.1em #db6b09 solid;
+  background-color: white;
+  border-radius: 50%;
+  box-shadow: 0.1em 0.1em 0.1em grey;
+  transition: 0.2s;
+}
+.slider-controls label:hover span{
+  background-color: #f2ab6b;
+}
+#r1:checked .slider-conteiner .slider{
+  transform: translateX(0);
+}
+#r2:checked ~ .slider-conteiner .slider{
+  transform: translateX(-30em);
+}
+#r3:checked ~ .slider-conteiner .slider{
+  transform: translateX(-60em);
+}
+#r4:checked ~ .slider-conteiner .slider{
+  transform: translateX(-90em);
+}
+.slider-text-conteiner{
+  width: 13em;
+  overflow: hidden;
+}
+.slider-text{
+  display: flex;
+  width: calc(13em * 4);
+  transition: transform 0.5s linear;
+}
+.text1,.text2,.text3,.text4{
+  width: 13em;
+}
+#r1:checked ~ .slider-text-conteiner .slider-text{
+  transform: translateX(0);
+}
+#r2:checked ~ .slider-text-conteiner .slider-text{
+  transform: translateX(-13em);
+}
+#r3:checked ~ .slider-text-conteiner .slider-text{
+  transform: translateX(-26em);
+}
+#r4:checked ~ .slider-text-conteiner .slider-text{
+  transform: translateX(-39em);
+}
+#r1:checked ~ .slider-controls .control-1 span, #r2:checked ~ .slider-controls .control-2 span,
+#r3:checked ~ .slider-controls .control-3 span, #r4:checked ~ .slider-controls .control-4 span{
+  background-color: #db6b09;
+}
+
+#r1:checked ~ .slider-controls label:hover span, #r2:checked ~ .slider-controls label:hover span,
+#r3:checked ~ .slider-controls label:hover span, #r4:checked ~ .slider-controls label:hover span{
+  border-color: #f2ab6b;
+}
