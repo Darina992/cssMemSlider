@@ -86,6 +86,7 @@ body{
 .slider-text{
   display: flex;
   width: calc(13em * 4);
+  color:#6c3809;
   transition: transform 0.5s linear;
 }
 .text1,.text2,.text3,.text4{
