@@ -112,3 +112,40 @@ body{
 #r3:checked ~ .slider-controls label:hover span, #r4:checked ~ .slider-controls label:hover span{
   border-color: #f2ab6b;
 }
+
+@media (max-width:768px) {
+  .conteiner{
+    width: 15em;
+  }
+  .slider-conteiner{
+    order: 1;
+    margin-bottom: 0;
+  }
+  .slider{
+    width: calc(15em * 4);
+  }
+  .slider-image{
+    width: 15em;
+    height: 15em;
+  }
+  #r1:checked .slider-conteiner .slider{
+    transform: translateX(0);
+  }
+  #r2:checked ~ .slider-conteiner .slider{
+    transform: translateX(-15em);
+  }
+  #r3:checked ~ .slider-conteiner .slider{
+    transform: translateX(-30em);
+  }
+  #r4:checked ~ .slider-conteiner .slider{
+    transform: translateX(-45em);
+  }
+  .slider-controls{
+    width: 50%;
+    margin: 1em auto;
+    order:2;
+  }
+  .slider-text-conteiner{
+    order:3;
+  }
+}
