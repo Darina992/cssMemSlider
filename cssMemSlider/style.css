@@ -67,6 +67,9 @@ body{
 .slider-controls label:hover span{
   background-color: #f2ab6b;
 }
+.slider-controls label:active span{
+  transform: scale(0.9);
+}
 #r1:checked .slider-conteiner .slider-items{
   transform: translateX(0);
 }
